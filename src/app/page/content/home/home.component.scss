@@ -37,6 +37,13 @@ img{
     color:#fff;
 }
 
+.clicksContainer{
+    margin:5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: $telefono) {
     .homeText{
         font-size: 1.2rem;

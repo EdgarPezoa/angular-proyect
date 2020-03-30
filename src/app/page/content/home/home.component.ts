@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() { }
+  clicks:number;
+  constructor(private localStorageService: LocalStorageService ) { }
 
   ngOnInit(): void {
+    this.clicks = this.localStorageService.clicks;
+  }
+
+  aumentarClicks(){
+    this.clicks = this.localStorageService.aumentarCuenta();
   }
 
 }
