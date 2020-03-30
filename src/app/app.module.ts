@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms/';
+import { HttpClientModule } from '@angular/common/http';
 
 // Services
 import { ProductosService } from './services/productos.service';
@@ -28,6 +29,7 @@ import { ContactoComponent } from './page/content/contacto/contacto.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule
   ],
