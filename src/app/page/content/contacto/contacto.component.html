@@ -1,1 +1,44 @@
-<p>contacto works!</p>
+<div class="container mt-3">
+    <div *ngIf="formularioEnviado" class="alert alert-success" role="alert">
+        <b>Éxito:</b> ¡Gracias por mantenerte en contacto con nosotros!
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <h2>Contacto</h2>
+            <h4 class="text-muted">Lorem ipsum</h4>
+            <p class="contactoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam, unde natus cum eos deleniti cumque non quisquam molestiae dicta sunt vero quasi labore, ullam adipisci animi quae atque in?</p>
+            <iframe class="contactoMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d213144.0483647266!2d-70.74613378359379!3d-33.41344669999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf2657c7ff4d%3A0xdd78f541b0f0d49c!2sGoogle%20Chile!5e0!3m2!1ses!2scl!4v1585538617433!5m2!1ses!2scl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="col-md-7 formularioContainer">
+            <h3 class="text-center">¡Estemos en contacto!</h3>
+            <div class="formContainer">
+                <form [formGroup]="formulario">
+                    <div class="form-group">
+                        <label for="">Nombre</label>
+                        <input formControlName="nombre" class="form-control" type="text" required>
+                        <p *ngIf="formulario.controls['nombre'].invalid && formulario.controls['nombre'].dirty" class="obligatorio">*Este campo es requerido*</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input formControlName="email" class="form-control" type="email">
+                        <p *ngIf="formulario.controls['email'].invalid && formulario.controls['email'].dirty" class="obligatorio">*Este campo es requerido*</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Asunto</label>
+                        <input formControlName="asunto" class="form-control" type="text">
+                        <p *ngIf="formulario.controls['asunto'].invalid && formulario.controls['asunto'].dirty" class="obligatorio">*Este campo es requerido*</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Descripcion</label>
+                        <textarea formControlName="descripcion" class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                        <p *ngIf="formulario.controls['descripcion'].invalid && formulario.controls['descripcion'].dirty" class="obligatorio">*Este campo es requerido*</p>
+                    </div>
+                    <div class="form-group dCenter">
+                        <p *ngIf="false" class="obligatorio">*Por favor, Rellene todos los campos*</p>
+                        <button (click)="enviarFormulario()" [disabled]="!formulario.valid || formularioEnviado" class="btn btn-primary">Enviar!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

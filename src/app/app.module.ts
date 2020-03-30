@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms/';
 
 // Services
 import { ProductosService } from './services/productos.service';
@@ -14,6 +15,7 @@ import { HomeComponent } from './page/content/home/home.component';
 import { NosotrosComponent } from './page/content/nosotros/nosotros.component';
 import { ContactoComponent } from './page/content/contacto/contacto.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { ContactoComponent } from './page/content/contacto/contacto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     ProductosService,

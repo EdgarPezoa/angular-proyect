@@ -1,0 +1,36 @@
+$telefono: 425px;
+
+form{
+    width: 80%;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.contactoMap{
+    width: 100%;
+    height: 300px;
+}
+
+.contactoText{
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.obligatorio{
+    color:red;
+}
+
+@media (max-width: $telefono) {
+    form{
+        padding: 0;
+        width: 100%;
+    }
+
+    .formularioContainer{
+        margin-top: 10px;
+    }
+}

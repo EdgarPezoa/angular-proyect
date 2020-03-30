@@ -1,0 +1,22 @@
+$telefono: 425px;
+
+footer{
+    background-color: #f8f9fa;
+    padding: 15px;
+    width:100%;
+    display: flex;
+}
+
+.container-copyright{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+@media (max-width: $telefono) {
+    footer{
+        text-align: center;
+        display: block;
+    }
+}
